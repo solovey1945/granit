@@ -1,0 +1,40 @@
+.popular {
+    &__list {
+        .popular__item {
+            max-width: 220px;
+            &:hover .popular__title {
+                text-overflow: initial;
+                overflow: visible;
+                white-space: initial;
+            }
+            .popular__title {
+                color: $black-light;
+                font-size: 13px;
+                text-decoration: underline;
+                padding: 22px 0;
+                max-height: 80px;
+                height: 100%;
+                white-space: nowrap;
+                overflow: hidden; 
+                text-overflow: ellipsis;
+            }
+            .popular__price {
+                margin-bottom: 20px;
+                &-old {
+                    color: #979797;
+                    font-size: 10px;
+                    text-decoration: line-through;
+                    margin-right: 10px;
+                }
+                &-new {
+                    color: $red;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+            .popular__btn {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.footer {
+    background-color: $black-light;
+    padding: 45px 0;
+    color: $white;
+    &__tel {
+        color: $white;
+    }
+    &__copy {
+        font-size: 12px;
+    }
+    .footer__btn {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        @include btn($white, $white, transparent);
+        padding: 8px 18px;
+        z-index: 2;
+        margin-top: 30px;
+        @include btnSwipe($white, $black-light);
+    }
+}

@@ -1,0 +1,18 @@
+.advantages {
+    background-color: #f4f4f4;
+    &__list {
+        .advantages__item {
+            max-width: 300px;
+            .advantages__title {
+                padding: 40px 0 20px 0;
+                font-size: 15px;
+                font-weight: 500;
+            }
+            .advantages__text {
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 18px;
+            }
+        }
+    }
+}

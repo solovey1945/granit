@@ -1,0 +1,32 @@
+@mixin btn($color-box, $color-text, $color-bg) {
+    border: 2px solid $color-box;
+    color: $color-text;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+    background-color: $color-bg;
+}
+
+@mixin btnSwipe($color, $color-text) {
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        background-color: $color;
+        z-index: -1;
+        transition: .3s ease-in-out;
+    }
+
+    &:hover {
+        color: $color-text;
+        border-color: darken($color, 3);
+
+        &:before {
+            transform: translateX(0);
+        }
+    }
+}

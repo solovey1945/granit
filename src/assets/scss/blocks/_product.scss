@@ -1,0 +1,32 @@
+.product {
+    &__list {
+        .product__item {
+            max-width: 300px;
+            .product__img {
+                height: 170px;
+            }
+            .product__content {
+                &-title {
+                    color: $black-light;
+                    font-size: 15px;
+                    font-weight: 500;
+                    text-decoration: underline;
+                    display: inline-block;
+                }
+                &-text {
+                    color: #626262;
+                    font-size: 13px;
+                    font-weight: 300;
+                    padding: 20px 0;
+                }
+                &-price {
+                    color: #0f0f0f;
+                    font-size: 16px;
+                    font-weight: 500;
+                    display: block;
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}

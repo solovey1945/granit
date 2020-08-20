@@ -1,0 +1,127 @@
+@import 'utils/vars';
+@import 'utils/mixins';
+@import 'utils/fonts';
+@import 'utils/nullstyle';
+
+/* Default настройки */
+
+.wrapper {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
+.container {
+    max-width: 940px !important;
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: $font-def;
+    color: $black-light;
+}
+
+.body-overflow {
+    overflow: hidden;
+}
+
+.page-section {
+    padding: 80px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    .logo-text {
+        margin-left: 15px;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 22px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        span {
+            font-size: 11px;
+            font-weight: 300;
+            line-height: 22px;
+        }
+    }
+}
+
+.phone {
+    line-height: 22px;
+    text-align: right;
+    a {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    p {
+        color: $grey;
+    }
+}
+
+.title {
+    color: $black-light;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.btn {
+    @include btn($yellow, #0d0d0d, $yellow);
+    padding: 10px 50px;
+    transition: all .2s;
+
+    &:hover {
+        background-color: darken($yellow, 5);
+        border-color: darken($yellow, 5);
+    }
+}
+
+.box {
+    text-align: center;
+    transition: .2s;
+    margin: 0 6px 0 6px;
+
+    &--gray {
+        border: 2px solid #f6f6f6;
+        padding: 24px;
+
+        &:hover {
+            box-shadow: 0 0 10px rgba($black, .5);
+        }
+    }
+
+    &--white {
+        border: 2px solid $white;
+        padding: 40px;
+        transition: opacity 200ms ease, opacity 200ms ease, transform 200ms ease, -webkit-transform 200ms ease;
+        &:hover {
+            background-color: $white;
+            transform: translate(0px, -10px);
+        }
+    }
+}
+
+
+/* --Default настройки-- */
+
+@import 'blocks/preloader';
+@import 'blocks/header';
+@import 'blocks/delivery';
+@import 'blocks/product';
+@import 'blocks/advantages';
+@import 'blocks/popular';
+@import 'blocks/services';
+@import 'blocks/contacts';
+@import 'blocks/footer';
+@import 'utils/media';

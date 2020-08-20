@@ -1,0 +1,19 @@
+.services {
+    background-color: #f4f4f4;
+    &__list {
+        .services__item {
+            max-width: 300px;
+            .services__title {
+                color: $black-light;
+                font-size: 15px;
+                font-weight: 500;
+                text-decoration: underline;
+                margin-top: 25px;
+                display: inline-block;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

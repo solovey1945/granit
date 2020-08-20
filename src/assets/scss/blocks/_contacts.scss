@@ -1,0 +1,82 @@
+.contacts {
+    position: relative;
+    &__map {
+        iframe {
+            width: 100%;
+            height: 520px;
+            border: 0;
+        }
+    }
+    &__card {
+        position: absolute;
+        top: 15%;
+        right: 5%;
+        width: 380px;
+        background-color: $white;
+        text-align: center;
+        text-align: left;
+        padding: 50px;
+        font-size: 14px;
+        transform: translate(0%, 0%);
+        .contacts__title {
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+        }
+        .contacts__phone {
+            position: relative;
+            padding-left: 40px;
+            &::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 5px;
+                left: 0px;
+                background: url(../img/contacts/phone-receiver.svg) center no-repeat;
+            }
+            &-num {
+                color: $black-light;
+                font-weight: 500;
+                line-height: 30px;
+                text-transform: uppercase;
+                display: block;
+            }
+        }
+        .contacts__address {
+            margin: 30px 0;
+            padding-left: 40px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background: url(../img/contacts/location-pin.svg) center no-repeat;
+            }
+        }
+        .contacts__mail {
+            text-decoration: underline;
+            padding-left: 40px;
+            position: relative;
+            &::before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: -3px;
+                left: 0px;
+                background: url(../img/contacts/close-envelope.svg) center no-repeat;
+            }
+            a {
+                color: $black-light;
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+/* Header */
+
+.header {
+    padding: 35px 0;
+    position: relative;
+    &__info {
+        margin-bottom: 20px;
+        .header__left {
+            .header__text {
+                h3 {
+                    color: $black-light;
+                }
+                span {
+                    color: $grey;
+                }
+            }
+        }
+        .header__right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            .header__phone {
+                .header__tel {
+                    color: $black-light;
+                }
+            }
+            .header__button {
+                margin-left: 30px;
+                .header__btn {
+                    position: relative;
+                    display: block;
+                    overflow: hidden;
+                    @include btn($black-light, $black-light, transparent);
+                    padding: 8px 25px;
+                    @include btnSwipe($yellow, $black-light);
+                }
+            }
+        }
+    }
+    &__navbar {
+        position: relative;
+        .header__menu {
+            background-color: $yellow;
+            text-align: center;
+            position: absolute;
+            right: 0;
+            left: 0;
+            z-index: 2;
+            .header__item {
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 22px;
+                a {
+                    color: $black;
+                    display: block;
+                    transition: all .2s;
+                    padding: 24px 0;
+                    user-select: none;
+                    &:hover {
+                        background-color: darken($yellow, 3);
+                    }
+                }
+            }
+        }
+    }
+    &__burgmenu {
+        display: none;
+        &.burg--active {
+            transition: .2s ease;
+            span {
+                display: none;
+            }
+            
+            &::after, &::before {
+                margin-top: 0;
+            }
+            &::after {
+                transform: rotate(45deg);
+            }
+            &::before {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+/* --Header-- */

@@ -1,0 +1,73 @@
+/* Delivery */
+.delivery {
+    &__slider {
+        cursor: move;
+        .delivery__slide {
+            position: relative;
+
+            .delivery__overlay {
+
+                img {
+                    height: 550px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                &::before {
+                    content: '';
+                    background-color: #212121;
+                    opacity: .85;
+                    height: 100%;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+
+            .delivery__content {
+                color: $white;
+                line-height: 22px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 25%;
+                z-index: 2;
+
+                h1 {
+                    font-size: 36px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    max-width: 240px;
+                    font-size: 14px;
+                    font-weight: 300;
+                    padding: 40px 0 65px 0;
+                }
+
+                .delivery__more {
+                    &-btn {
+                        margin-right: 30px;
+                        padding: 10px 25px;
+                        &:hover {
+                            background-color: darken($yellow, 5);
+                            border-color: darken($yellow, 5);
+                        }
+                    }
+                    &-link {
+                        color: $white;
+                        font-size: 12px;
+                        font-weight: 500; 
+                        text-decoration: underline;
+                        font-weight: 500;
+                        margin-left: 15px;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*--Delivery--*/
